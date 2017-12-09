@@ -5,6 +5,7 @@
 // @description  try to take over the world!
 // @author       You
 // @match        https://www.newyorkpizza.nl/secure/checkout
+// @require      http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js
 // @grant        none
 // ==/UserScript==
 
