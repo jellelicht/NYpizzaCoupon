@@ -92,17 +92,17 @@ function checkCodeCompat(code){
     data = { deliveryType: 1, storeId: code, removeIncompatibleCoupons: false };
     
     $.post('/Order/SetDeliveryTypeCurrentOrder/', data,
-        function (data) {
-            if (data.succeeded) {
-                console.log("yes compat id: "+code);
-            } else {
-                //console.log("not compat id:"+code);
-            }
-        if(code < 200){
-            checkCodeCompat(code+1);
-        }
-        },
-    "json");
+           function (data) {
+               if (data.succeeded) {
+                   console.log("yes compat id: "+code);
+               } else {
+                   //console.log("not compat id:"+code);
+               }
+               if(code < 200){
+                   checkCodeCompat(code+1);
+               }
+           },
+           "json");
 }
 
 (function() {
